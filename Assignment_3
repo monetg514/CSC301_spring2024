@@ -1,0 +1,27 @@
+//problem 1
+Function square (input) {
+	If (empty(input)) {
+		Return [ ];
+	} else {
+		Return [input [0] * input[0]] + square(input[1:end]);
+	}
+}
+Let I = [1, 2, 3];
+Let new_list = square(l);
+Assert(new_list == [1, 4, 9]);
+
+//problem 2
+Function member (input, m) {
+	If (empty(input)) {
+		Return false;
+	} else if input [0] == m {
+		Return true; 
+	} else {
+		Return member (input [1: end], m);
+	}
+}
+		
+Let I = [1, 2, 3];
+Assert (member (1, 2) == true);
+Assert (member (1, 5) == false);
+
